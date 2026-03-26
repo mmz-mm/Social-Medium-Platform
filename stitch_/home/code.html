@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discovery - Social Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#baa3ff",
+              "on-primary-fixed": "#000000",
+              "surface-container": "#dde9ff",
+              "secondary-fixed": "#b7d3ff",
+              "inverse-primary": "#00a5fd",
+              "surface-dim": "#bcd6ff",
+              "on-error-container": "#570008",
+              "primary": "#006096",
+              "on-tertiary": "#f7f0ff",
+              "secondary-container": "#b7d3ff",
+              "on-tertiary-fixed-variant": "#41218d",
+              "primary-fixed": "#17a8ff",
+              "secondary-fixed-dim": "#9fc6ff",
+              "outline": "#5f789c",
+              "on-secondary-container": "#004884",
+              "error": "#b31b25",
+              "on-primary-fixed-variant": "#002f4c",
+              "surface-tint": "#006096",
+              "tertiary-fixed-dim": "#ad92ff",
+              "on-tertiary-container": "#381584",
+              "primary-dim": "#005483",
+              "error-container": "#fb5151",
+              "on-tertiary-fixed": "#1d0054",
+              "primary-container": "#17a8ff",
+              "outline-variant": "#96afd5",
+              "tertiary": "#6448b1",
+              "inverse-surface": "#000e22",
+              "surface": "#f4f6ff",
+              "error-dim": "#9f0519",
+              "primary-fixed-dim": "#009aed",
+              "on-background": "#142f4f",
+              "on-error": "#ffefee",
+              "surface-bright": "#f4f6ff",
+              "secondary-dim": "#005192",
+              "surface-container-highest": "#cadeff",
+              "secondary": "#005da7",
+              "surface-container-low": "#ebf1ff",
+              "on-surface-variant": "#445d7f",
+              "surface-container-high": "#d4e3ff",
+              "tertiary-dim": "#583ba4",
+              "background": "#f4f6ff",
+              "surface-variant": "#cadeff",
+              "on-surface": "#142f4f",
+              "on-primary": "#ebf3ff",
+              "on-secondary": "#eef3ff",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed-variant": "#005294",
+              "tertiary-fixed": "#baa3ff",
+              "on-secondary-fixed": "#003563",
+              "on-primary-container": "#00253e",
+              "inverse-on-surface": "#859ec4"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', 'Source Han Sans CN', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-all duration-200 text-slate-400">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-plus-jakarta text-lg font-bold tracking-tight text-[#00a5fd]">Discovery</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-all duration-200 text-slate-400">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="active:scale-95 transition-all duration-200 text-slate-400">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a smiling young professional man with a clean beard and modern haircut, soft natural studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_w3sITpqN3hMQUNs5VYo28e0IJ7oiZbzs__UZUoI62uHSNwBXBEgCEAF9-JhEaPDzSvVJvY696ee0Sfejsw1OtZJnWFVzfImgcvCkGFFl_OsdaPk1IQ-tdcScmGVNsA5_ImiYeZ2RXprrDSyFQecMg4UHBXGlEoj35lm1ShhMGMjFKJRpAfx5MdrLL3FceGd42fp9L3GKV1xlFVFpavnXEd-lIwzTpNoPc7aJGkAge824uI1NlNV9AFUFR3d_7kl6g5UXr895ZFI"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<main class="pt-20 px-4 max-w-md mx-auto space-y-6">
+<!-- Pull to Refresh Indicator -->
+<div class="flex justify-center py-2">
+<div class="w-8 h-8 border-2 border-primary/20 border-t-primary rounded-full animate-spin"></div>
+</div>
+<!-- Post Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)] overflow-hidden">
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="headshot of a stylish woman with a warm smile, natural outdoor lighting with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfmIlczJVEpRMihQ6WBgVtijEFTFeaAksHyifEl9wjTZUriI3itUJeDr_NOyVdwi8k42z9ROUFUIsvVBsnP2zjt3-IrzOpjhfGuEFRYGBR2TMTxaGZdhmip0X9C4fJiu3U2VEl2HtyhIz0J1rOQHvzckVWJVWMPllSyhLxJHIm3ML1uFL0azTwp-BZuyBENfPecnML8SoSUcwOy2BeUGsnNPDHrqIkusg3xpyjTG3_WRQBHA8Xfm8uu2iyHRjTNk7CReGto2ZhuOw"/>
+</div>
+<div>
+<h3 class="font-bold text-sm text-on-surface">林小雨 Rainie</h3>
+<p class="text-xs text-on-surface-variant">2 小时前</p>
+</div>
+</div>
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="px-4 pb-3">
+<p class="text-sm leading-relaxed text-on-surface mb-4">
+                    今天在城市中心发现了一个超赞的屋顶咖啡厅！环境安静，阳光也刚刚好。这里非常适合周末发呆或者处理一点轻松的工作。☕️✨ #城市探店 #生活方式
+                </p>
+<div class="rounded-xl overflow-hidden aspect-video">
+<img class="w-full h-full object-cover" data-alt="modern minimalist cafe interior with large glass windows, sunlight streaming through, warm wood textures and plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm7BGttGdIeeLYXctUs1deJFyyeYQruK5Sy4gf55cscilLFfrFj7A9c5S76g0ChZX6EMxCXkYLL49zM-q47SrouACfPYlEHQvQZZbE_woqWNV2qQIWAzt9YaakLlAqX68tUgjzO5iagZrjnA3XjFAK_CQtGsxg5C5zfR4QEfOK0zlUyLwt0JH4AkIMDaP8XmhN572yN087JE6Z3EmmYPtF_fpoHhEhY7mH9SLg63A5dSXRpmjnXLKWyz5kvDd3nOsHQM6_A9p7KFc"/>
+</div>
+</div>
+<div class="flex items-center justify-between px-6 py-4 border-t border-surface-container-low">
+<button class="flex items-center gap-1.5 text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="text-xs font-semibold">128</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+<span class="text-xs font-semibold">24</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="text-xs font-semibold">分享</span>
+</button>
+</div>
+</article>
+<!-- Post Card 2: Multi-Image Layout -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)] overflow-hidden">
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary/10 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="portrait of a young designer with glasses, looking thoughtful, minimalist studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ4vU_0s5ZfM128Rcpd-OyNkXdcb1zv4t8eF0jqDRuq5g7OH0zSqkL8nqFw___pY8aDOkOjXNhq-SAe2guvfRwfJrbhz81qpIk-dISNi1gfbyrEWdqfXJ2bBSij1bCz-vQ3MgLqPwlztD5i-Vchhtd51UE6iYdnr1Y_LWJxea3WLGr2wCQ80DcoHvKMdNqcdntMtDrZHUyyOCRKXoYxgi8trfXXHxRkFrPIW3CojR2Pj7IwMSI-wn05whakv7ty1eXYGzgO8Qm0Bs"/>
+</div>
+<div>
+<h3 class="font-bold text-sm text-on-surface">陈默 Alex</h3>
+<p class="text-xs text-on-surface-variant">5 小时前</p>
+</div>
+</div>
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="px-4 pb-3">
+<p class="text-sm leading-relaxed text-on-surface mb-4">
+                    最近在研究这种极简风格的摄影，利用自然光影来构图。大家觉得哪一张更有氛围感？📸
+                </p>
+<div class="grid grid-cols-2 gap-2">
+<div class="rounded-xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="abstract architectural shadow on a clean white wall during sunset, dramatic high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk4AtkrSxd5cNZzxfwySrBo4zB2DLljzyD3KE3M9qFWO6z0mO4QZhlCfVbFl8l3nLDkWA4gNzR-mr39hrvpbde4a7FWK3dAojXDgUTyrVfGpdp2KjGE_qfbKmP4WxnTJMVVTQUtrkutrsSDbEo6Z7XZZHK6mJtDuzAh1Oe9RhduGrNkhYJN3ehXbxLuwzKTl8mZtRhOKMsYU2oRpSS9m2X762_31mnq-6RhEsEwvg77enxbySfaThDTdCCVakJbbOCuR7ZDF2sESE"/>
+</div>
+<div class="rounded-xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="minimalist composition of a single green leaf in a glass vase against a neutral beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5ddBbZd5qVRFMY495BOhrLPCyVx8hR4yIBWDpVL0PE922EoucyU89Ua36CQofTO-ffK9TG82rKfXzjQxbWJTzDvGPssmAaOSTRGZ82QVeY64sXZ_LrI4oC5vJFB1bEwIBBkEXLz_SIutta6gSRsxmWCS19FAjm65cdsTy3uzoyGGKxJi5Rahu4PBoao9E4ezStAE4KI_33RnML5iY5tDIFcuRK_91GlEvP5-ZgPBMVfU9HGV_3OenZUPHVPApcQ_ZQrwBmSQGVQ"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between px-6 py-4 border-t border-surface-container-low">
+<button class="flex items-center gap-1.5 text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="text-xs font-semibold">342</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">chat_bubble_outline</span>
+<span class="text-xs font-semibold">56</span>
+</button>
+<button class="flex items-center gap-1.5 text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="text-xs font-semibold">分享</span>
+</button>
+</div>
+</article>
+<!-- Loading State Indicator -->
+<div class="flex flex-col items-center justify-center py-8 gap-2">
+<div class="flex gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style="animation-delay: 0s;"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style="animation-delay: 0.2s;"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce" style="animation-delay: 0.4s;"></span>
+</div>
+<p class="text-[10px] font-semibold tracking-wider text-slate-400 uppercase">加载更多内容</p>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-br from-[#00a5fd] to-[#17a8ff] text-white rounded-full shadow-lg flex items-center justify-center active:scale-95 transition-all duration-200 z-50">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
+<div class="flex justify-around items-center px-4 pt-3 pb-6 w-full">
+<a class="flex flex-col items-center justify-center bg-[#00a5fd]/10 text-[#00a5fd] rounded-2xl px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#00a5fd] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#00a5fd] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#00a5fd] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-manrope text-[10px] font-semibold tracking-wide">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

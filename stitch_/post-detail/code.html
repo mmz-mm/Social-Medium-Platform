@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ad92ff",
+              "on-secondary-fixed-variant": "#005294",
+              "surface-container-low": "#ebf1ff",
+              "surface-dim": "#bcd6ff",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed": "#b7d3ff",
+              "error-dim": "#9f0519",
+              "surface-variant": "#cadeff",
+              "surface-container-high": "#d4e3ff",
+              "secondary-dim": "#005192",
+              "background": "#f4f6ff",
+              "on-tertiary": "#f7f0ff",
+              "primary-container": "#17a8ff",
+              "on-secondary-container": "#004884",
+              "outline": "#5f789c",
+              "on-primary": "#ebf3ff",
+              "error": "#b31b25",
+              "surface-tint": "#006096",
+              "on-secondary": "#eef3ff",
+              "outline-variant": "#96afd5",
+              "tertiary": "#6448b1",
+              "primary": "#006096",
+              "primary-dim": "#005483",
+              "on-tertiary-fixed-variant": "#41218d",
+              "on-primary-fixed-variant": "#002f4c",
+              "on-surface-variant": "#445d7f",
+              "on-error": "#ffefee",
+              "surface": "#f4f6ff",
+              "primary-fixed-dim": "#009aed",
+              "on-tertiary-fixed": "#1d0054",
+              "surface-bright": "#f4f6ff",
+              "inverse-on-surface": "#859ec4",
+              "tertiary-dim": "#583ba4",
+              "primary-fixed": "#17a8ff",
+              "tertiary-fixed": "#baa3ff",
+              "on-tertiary-container": "#381584",
+              "tertiary-container": "#baa3ff",
+              "secondary": "#005da7",
+              "surface-container": "#dde9ff",
+              "on-surface": "#142f4f",
+              "secondary-container": "#b7d3ff",
+              "secondary-fixed-dim": "#9fc6ff",
+              "surface-container-highest": "#cadeff",
+              "inverse-surface": "#000e22",
+              "on-error-container": "#570008",
+              "inverse-primary": "#00a5fd",
+              "on-secondary-fixed": "#003563",
+              "on-primary-fixed": "#000000",
+              "on-primary-container": "#00253e",
+              "error-container": "#fb5151",
+              "on-background": "#142f4f"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+              "body": ["Manrope", "Noto Sans SC"],
+              "label": ["Manrope", "Noto Sans SC"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', 'Noto Sans SC', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#e4f0f7]/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 shadow-[0_2px_8px_rgba(24,28,32,0.02)]">
+<button class="text-[#00a5fd] active:scale-95 transition-transform duration-200 flex items-center justify-center p-2 rounded-full hover:bg-[#c3dae8]/50">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#142f4f]">Post</h1>
+<button class="text-[#00a5fd] active:scale-95 transition-transform duration-200 flex items-center justify-center p-2 rounded-full hover:bg-[#c3dae8]/50">
+<span class="material-symbols-outlined">share</span>
+</button>
+</header>
+<main class="pt-20 px-4 max-w-2xl mx-auto space-y-6">
+<!-- Author Info Bar -->
+<section class="flex items-center justify-between bg-surface-container-lowest p-4 rounded-2xl shadow-sm">
+<div class="flex items-center gap-3">
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover border-2 border-primary-container/20" data-alt="professional portrait of a creative man with short dark hair and a warm friendly expression in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxpytj4yl519N-OxTdGFUT-u07LUv5WIuNgU5Qw8_1qEY_DG_e3P8zmINLx8PSBfR3FyfATDpmo3E2Rx98rixotrfNiTAhjEg4JfJJoRAM7hDdmAxZxvMmU6a6SBfcye4s07qUaieKGU-rCkxAkz3K2jMfLa32LR010N_MauXAYTtEQhpTFdJ4uV_NI7EJl4DQIozi4t7Q1r984EvddqdJdq8xCuK62MPeTUVk_aTabHx3KJCg7_IMlxfLWgg2r4i9O0sCAOTEXw8"/>
+<div class="flex flex-col">
+<span class="font-bold text-on-surface text-base leading-tight">陈默 Alex</span>
+<span class="text-on-surface-variant text-xs font-medium">5小时前</span>
+</div>
+</div>
+<button class="bg-surface-container-low text-primary px-5 py-2 rounded-full font-bold text-sm hover:bg-surface-container transition-colors active:scale-95">
+                关注
+            </button>
+</section>
+<!-- Post Content Area -->
+<article class="bg-surface-container-lowest p-5 rounded-3xl space-y-6 shadow-sm">
+<div class="space-y-4">
+<p class="text-on-surface leading-relaxed text-[16px] font-normal tracking-wide">
+                    极简主义设计不仅是一种视觉风格，更是一种生活态度。在复杂的现代生活中，寻找那种纯粹的留白，让光影成为建筑的主角。少即是多（Less is More）不仅仅是口号，它是对本质的终极追求。
+                </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold tracking-tight">#摄影美学</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold tracking-tight">#极简主义</span>
+</div>
+</div>
+<!-- Bento Grid Image Display -->
+<div class="grid grid-cols-2 gap-3">
+<div class="col-span-2 overflow-hidden rounded-xl h-64">
+<img alt="Main Architecture" class="w-full h-full object-cover" data-alt="modern minimalist white architecture building against a clear blue sky with sharp geometric shadows and high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL2i0WlT3ggUozUh9DM_4Jljcl_my9qWVx5AcZpg_HY5mOsqR-Vnft-b7YyST-RBj8-SNvqaijnSrZAywHIjC9jllDbmnkbEFlfAbt5QHa_zCkYXXsqOvdHnWWnmJVgO6FsYmf2ojIDoH86MyQjjFAWkv8v8Vm8ETrA0NxxlMR7PZFewB-VA0zuSWr3SeGoFUoV0-nilZUnwFjVFFKfP0qD1o3dgC-7h6WlGMk6kgwmGadA9ys9PwPVC3ts_lE8i-DFmo7qraaFxA"/>
+</div>
+<div class="overflow-hidden rounded-xl h-40">
+<img alt="Camera" class="w-full h-full object-cover" data-alt="vintage analog camera on a clean white table with soft morning shadows from a nearby window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqCHtLUtu0pwlPw6R7yCgg0frEc_WUjHaWRmtHa5IcbxBC1qP1aa43MJ84E3ikhD8J8Nyt4gikAWaSpjbYifc-ebR8Ws6XEGanoOSEDkYD9eIg-tfI7NmmZsxW1Q2tmbQaFYxBT51Lj1KG1RVDy7YHDkTWZXgNSkO2wqIj7mOUu2e-G_PZTPAEgJeabz_l_yJgYue5Wh-_4TZlbsNdweNTTrMwKvnmFllL0fq329re280byEC7IX2K0BIUeU_Cx8Gcs5g1Ix1wahg"/>
+</div>
+<div class="overflow-hidden rounded-xl h-40">
+<img alt="Furniture" class="w-full h-full object-cover" data-alt="elegant minimalist designer chair in a bright sunlit room with soft shadows on the wooden floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYVCuJGw4Uu_R6nlB2d_-TEICD6gxOU8vE5uX05ZLpMx17htLP3rKf5S3u5iakKAmfEEJ9R9e-kxtLBBK3H3qeakDOHEuMau8QEBIlAJBBocR9OEz6g25vbWpo2L76Ap0I8Mb4cujMYz_uEWCA_CRuxmC22XKGmaPSLG5CQ2hAiRbGci4rVBx-hLgho4tV5-X8IR0Gp53vD7LWuuxIzlVo4TnjiRoUv9a8dkmhPS56sGe7UHJ5muKfG6FbbrzhPQ0S1ZXoO3EYd0Q"/>
+</div>
+</div>
+<!-- Interaction Data Bar -->
+<div class="flex items-center gap-6 pt-4 border-t border-surface-container-low">
+<div class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="text-sm font-bold font-label">1.2k</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">chat_bubble</span>
+<span class="text-sm font-bold font-label">85</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl">ios_share</span>
+<span class="text-sm font-bold font-label">243</span>
+</div>
+</div>
+</article>
+<!-- Comment Section -->
+<section class="bg-surface-container-lowest p-5 rounded-3xl space-y-6 shadow-sm mb-20">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-on-surface text-lg">全部评论 (85)</h3>
+<button class="flex items-center gap-1 text-on-surface-variant text-sm font-bold">
+<span>最热</span>
+<span class="material-symbols-outlined text-sm">unfold_more</span>
+</button>
+</div>
+<div class="space-y-6">
+<!-- Single Comment -->
+<div class="flex gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" data-alt="close-up portrait of a woman with a calm expression looking directly at camera with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjyRWgXNVFZhejmFXPHzaKWy5M4dwzX62pMPrGH-r2LBg8fTOAxiZwEReidlM9PfqLPf3CbPxTTqo33PdurwlOEB-Cvju6j4dbMEUSOAegHSfdX5drH8tM58f_w6rYEsQtipL0WisQ0K0J-NlVJgH-Y0Wosk_3GjzA7QVyfEIi0rFFSCRryvbyVUxAWzSJ9rPjNWPbp4w99314P6rvBw7RdNlcfahSjOPDC_hHpwRyiwsi2uDd4_Lm4niXxZb4Gr2CmPtZZUmMSTw"/>
+<div class="flex-1 space-y-2">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-bold text-sm block">苏苏 Sarah</span>
+<span class="text-on-surface-variant text-[10px] font-medium uppercase tracking-wider">3小时前</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">favorite</span>
+<span class="text-xs font-bold">12</span>
+</div>
+</div>
+<p class="text-on-surface text-sm leading-relaxed">
+                            那张建筑图的光影感太绝了，极简主义确实能让人心境平和。
+                        </p>
+<!-- Secondary Reply -->
+<div class="bg-surface-container-low p-3 rounded-xl mt-3 space-y-2">
+<div class="flex items-center gap-2">
+<span class="font-bold text-xs">陈默 Alex</span>
+<span class="text-primary text-[10px] bg-primary-container/20 px-1.5 rounded uppercase">作者</span>
+</div>
+<p class="text-on-surface text-sm">谢谢苏苏！现场的光影更震撼。</p>
+</div>
+</div>
+</div>
+<!-- Another Comment -->
+<div class="flex gap-3">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover" data-alt="side profile of a young man with glasses looking away thoughtfully in an urban environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr8O3a-TETU61WJ4Kkb5PYZol2Jg_4TGPUT5fabm-xiFM4nSjprgiOZMuzYN4eLWBX558WccP3HV95ZzYyN5LypP7kqfy2K6f3120H2w39guaORWaZPd9Lq7VLOkSXcLzAL353g5FNyLOU7SsAHfjwgsASRrq_FlLgqMZgcidanEbY83N7TCZWI4wFOxcexk0o99DQe1O39DwbTuaIeSJL6q9fgOujKidTQYbS80Qx1xF_JQKhR7YfKFRi35lfeQaX8pzJxZr2rSI"/>
+<div class="flex-1 space-y-2">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-bold text-sm block">设计顽童</span>
+<span class="text-on-surface-variant text-[10px] font-medium uppercase tracking-wider">4小时前</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">favorite</span>
+<span class="text-xs font-bold">8</span>
+</div>
+</div>
+<p class="text-on-surface text-sm leading-relaxed">
+                            我也在研究极简主义，感觉最难的是如何在简单的形式中保留功能性。
+                        </p>
+</div>
+</div>
+<!-- Placeholder for Empty State (hidden here but logic exists) -->
+<div class="hidden flex flex-col items-center justify-center py-12 text-on-surface-variant opacity-60">
+<span class="material-symbols-outlined text-4xl mb-2">auto_awesome</span>
+<p class="text-sm font-medium">快来发表你的见解吧 ✨</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Input Area -->
+<div class="fixed bottom-0 left-0 w-full p-4 bg-surface/80 backdrop-blur-xl z-50">
+<div class="max-w-2xl mx-auto flex items-center gap-3 bg-surface-container-low rounded-2xl px-4 py-3 shadow-[0_-10px_30px_rgba(24,28,32,0.04)]">
+<span class="material-symbols-outlined text-on-surface-variant">edit_note</span>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm placeholder:text-on-surface-variant/60 font-medium" placeholder="发表评论..." type="text"/>
+<button class="bg-gradient-to-br from-[#00a5fd] to-[#86ccfc] text-white p-2 rounded-xl flex items-center justify-center active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</body></html>

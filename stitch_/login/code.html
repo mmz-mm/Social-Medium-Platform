@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic | 登录</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#381584",
+              "on-secondary-container": "#004884",
+              "tertiary-fixed": "#baa3ff",
+              "primary-dim": "#005483",
+              "outline": "#5f789c",
+              "tertiary": "#6448b1",
+              "on-tertiary-fixed-variant": "#41218d",
+              "inverse-surface": "#000e22",
+              "tertiary-container": "#baa3ff",
+              "on-error": "#ffefee",
+              "secondary-container": "#b7d3ff",
+              "surface-container-low": "#ebf1ff",
+              "error": "#b31b25",
+              "surface": "#f4f6ff",
+              "tertiary-dim": "#583ba4",
+              "secondary": "#005da7",
+              "secondary-dim": "#005192",
+              "surface-bright": "#f4f6ff",
+              "on-surface": "#142f4f",
+              "error-container": "#fb5151",
+              "primary-fixed": "#17a8ff",
+              "primary": "#006096",
+              "on-primary-fixed": "#000000",
+              "primary-fixed-dim": "#009aed",
+              "on-primary": "#ebf3ff",
+              "tertiary-fixed-dim": "#ad92ff",
+              "outline-variant": "#96afd5",
+              "primary-container": "#17a8ff",
+              "background": "#f4f6ff",
+              "on-surface-variant": "#445d7f",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#00253e",
+              "on-secondary-fixed-variant": "#005294",
+              "on-background": "#142f4f",
+              "surface-tint": "#006096",
+              "on-primary-fixed-variant": "#002f4c",
+              "on-tertiary-fixed": "#1d0054",
+              "surface-variant": "#cadeff",
+              "surface-container-high": "#d4e3ff",
+              "surface-dim": "#bcd6ff",
+              "error-dim": "#9f0519",
+              "on-secondary-fixed": "#003563",
+              "on-tertiary": "#f7f0ff",
+              "secondary-fixed-dim": "#9fc6ff",
+              "secondary-fixed": "#b7d3ff",
+              "surface-container": "#dde9ff",
+              "on-error-container": "#570008",
+              "surface-container-highest": "#cadeff",
+              "inverse-primary": "#00a5fd",
+              "inverse-on-surface": "#859ec4",
+              "on-secondary": "#eef3ff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>body { font-family: 'Source Han Sans SC', '思源黑体', 'Manrope', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.bg-login-gradient {
+    background: radial-gradient(circle at top left, #ebf1ff 0%, #f4f6ff 100%);
+}</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface min-h-screen flex flex-col items-center selection:bg-primary-container selection:text-on-primary-container">
+<!-- Suppressed Shell: Login page is transactional, Navigation hidden to focus user -->
+<main class="flex-grow w-full flex flex-col items-center justify-center px-6 py-12 bg-login-gradient">
+<!-- Header / Logo -->
+<header class="mb-12 text-center">
+<div class="inline-flex items-center justify-center p-3 rounded-xl bg-surface-container-lowest shadow-sm mb-4">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="bubble_chart">bubble_chart</span>
+</div>
+<h1 class="text-4xl font-black italic tracking-tighter text-on-surface font-headline">
+                Kinetic
+            </h1>
+</header>
+<!-- Login Card -->
+<section class="w-full max-w-md bg-surface-container-lowest rounded-xl shadow-[0_10px_30px_rgba(20,47,79,0.04),0_2px_8px_rgba(20,47,79,0.02)] p-8 md:p-10 border border-outline-variant/10">
+<div class="space-y-1 mb-8">
+<h2 class="text-2xl font-bold text-on-surface font-headline">欢迎回来</h2>
+<p class="text-on-surface-variant text-sm">请输入您的凭据以访问账户</p>
+</div>
+<form action="#" class="space-y-5">
+<!-- Phone/Email Field -->
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1" for="identifier">手机号码或邮箱</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors" data-icon="alternate_email">alternate_email</span>
+</div>
+<input class="w-full pl-11 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-high transition-all outline-none" id="identifier" name="identifier" placeholder="hello@kinetic.app" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center ml-1">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant" for="password">密码</label>
+<a class="text-xs font-semibold text-primary hover:text-primary-dim transition-colors" href="#">忘记密码？</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors" data-icon="lock_open">lock_open</span>
+</div>
+<input class="w-full pl-11 pr-4 py-4 bg-surface-container-low border-none rounded-xl text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-high transition-all outline-none" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Login Button -->
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-dim active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-2" type="submit">
+<span>登录</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative my-10 flex items-center">
+<div class="flex-grow border-t border-outline-variant/20"></div>
+<span class="px-4 text-xs font-bold text-outline-variant uppercase tracking-widest">或通过以下方式登录</span>
+<div class="flex-grow border-t border-outline-variant/20"></div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-low hover:bg-surface-container-high rounded-xl transition-colors border border-outline-variant/5">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Official Google multi-colored 'G' brand logo icon on a clean transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxt3GdSYcVhWWyE4BM9zN4a7rTAnw5YfzOz0HpMH5lybioJRojXWpFSBQPaF7IMehg8W7s_QgVmb7Yq4TBL3mwkPZsEwYvV48vGiddKuYYKHKZIxsD4kshTa0tKoLahaW_oem0Pa6IiS3HFM2B74GwQzAfKqtMKqOBVj-TrzUnw03QIeyH4oJi3ElnwuJZeSQ0qCR6cGHOEUEmNruIood9MF-LZP4kUfBouzDWnhRzWvj0FsVX6J7NNCpc9mvjVh9YfmkJffXNa7A"/>
+<span class="text-sm font-semibold text-on-surface">Google 账号</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 bg-surface-container-low hover:bg-surface-container-high rounded-xl transition-colors border border-outline-variant/5">
+<span class="material-symbols-outlined text-xl" data-icon="code">code</span>
+<span class="text-sm font-semibold text-on-surface">GitHub 账号</span>
+</button>
+</div>
+<!-- Toggle Sign Up -->
+<p class="mt-10 text-center text-sm text-on-surface-variant">还没有账号？ <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4 ml-1" href="#">立即注册</a></p>
+</section>
+<!-- Image Decoration (Editorial Kineticism style) -->
+<div class="hidden lg:block absolute right-12 bottom-12 w-64 h-64 opacity-20 pointer-events-none">
+<div class="w-full h-full rounded-full bg-gradient-to-br from-primary to-primary-container blur-3xl"></div>
+</div>
+</main>
+<!-- Shared Footer -->
+<footer class="w-full py-8 mt-auto flex flex-col items-center space-y-4 px-8 text-center bg-sky-50 dark:bg-slate-950 tonal-shift bg-sky-100 dark:bg-slate-900">
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-300 transition-all opacity-80 hover:opacity-100" href="#">隐私政策</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-300 transition-all opacity-80 hover:opacity-100" href="#">服务条款</a>
+<a class="font-['Manrope'] text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500 hover:text-blue-500 dark:hover:text-blue-300 transition-all opacity-80 hover:opacity-100" href="#">帮助中心</a>
+</div>
+<p class="font-['Manrope'] text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500 opacity-80">© 2024 Kinetic Editorial. 保留所有权利。</p>
+</footer>
+</body></html>

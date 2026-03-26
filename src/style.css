@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #17263f;
+  background: #eef3fb;
+  font-family: Manrope, sans-serif;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(15, 135, 216, 0.12), transparent 28%), linear-gradient(180deg, #f7fbff 0%, #eef3fb 100%);
+  color: #17263f;
+  font-family: Manrope, sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+
+  button:active {
+    @apply scale-[0.98];
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply relative mx-auto flex min-h-screen w-full max-w-[430px] flex-col px-4 py-5 sm:px-5;
+  }
+
+  .glass-panel {
+    @apply relative rounded-[28px] border border-white/60 bg-white/80 backdrop-blur-xl shadow-card;
+  }
+
+  .section-card {
+    @apply rounded-[26px] bg-surface-card shadow-card;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-brand-gradient px-5 py-3.5 font-semibold text-white shadow-float;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-5 py-3.5 font-semibold text-primary-deep shadow-card;
+  }
+
+  .soft-input {
+    @apply w-full rounded-2xl border border-transparent bg-surface-low px-4 py-3.5 text-sm text-ink outline-none placeholder:text-ink-soft transition focus:border-primary/20 focus:bg-white focus:shadow-sm;
+  }
+
+  .icon-button {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/70 text-ink shadow-sm;
+  }
+
+  .bottom-dock {
+    @apply sticky bottom-4 mt-auto rounded-[28px] border border-white/70 bg-white/90 px-3 py-2 shadow-card backdrop-blur-xl;
+  }
+}
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>聊天 - Alex Rivers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Manrope', 'Source Han Sans SC', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#eef3ff",
+              "tertiary-dim": "#583ba4",
+              "primary-container": "#17a8ff",
+              "outline": "#5f789c",
+              "on-tertiary": "#f7f0ff",
+              "on-surface-variant": "#445d7f",
+              "tertiary": "#6448b1",
+              "on-secondary-container": "#004884",
+              "surface-variant": "#cadeff",
+              "on-tertiary-container": "#381584",
+              "error-container": "#fb5151",
+              "secondary-fixed-dim": "#9fc6ff",
+              "inverse-surface": "#000e22",
+              "tertiary-fixed-dim": "#ad92ff",
+              "surface-container-low": "#ebf1ff",
+              "surface": "#f4f6ff",
+              "secondary-dim": "#005192",
+              "background": "#f4f6ff",
+              "surface-container-high": "#d4e3ff",
+              "on-error-container": "#570008",
+              "on-primary-fixed-variant": "#002f4c",
+              "outline-variant": "#96afd5",
+              "inverse-primary": "#00a5fd",
+              "secondary-fixed": "#b7d3ff",
+              "on-secondary-fixed": "#003563",
+              "surface-bright": "#f4f6ff",
+              "tertiary-container": "#baa3ff",
+              "error": "#b31b25",
+              "secondary": "#005da7",
+              "on-primary-fixed": "#000000",
+              "on-background": "#142f4f",
+              "primary-fixed": "#17a8ff",
+              "surface-tint": "#006096",
+              "on-tertiary-fixed-variant": "#41218d",
+              "surface-container": "#dde9ff",
+              "secondary-container": "#b7d3ff",
+              "primary": "#006096",
+              "on-primary-container": "#00253e",
+              "surface-dim": "#bcd6ff",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed-dim": "#009aed",
+              "primary-dim": "#005483",
+              "on-surface": "#142f4f",
+              "tertiary-fixed": "#baa3ff",
+              "on-primary": "#ebf3ff",
+              "error-dim": "#9f0519",
+              "surface-container-highest": "#cadeff",
+              "on-secondary-fixed-variant": "#005294",
+              "inverse-on-surface": "#859ec4",
+              "on-tertiary-fixed": "#1d0054",
+              "on-error": "#ffefee"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col selection:bg-primary-container/30">
+<!-- Top Navigation Bar (Shared Component Logic) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 h-16 bg-slate-50/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(24,28,32,0.04),0_2px_8px_rgba(24,28,32,0.02)]">
+<div class="flex items-center gap-3">
+<button class="p-2 -ml-2 text-on-surface active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="relative">
+<img alt="Alex Rivers" class="w-10 h-10 rounded-full object-cover border-2 border-surface-container-lowest" data-alt="close-up portrait of a friendly young man with short dark hair and a slight smile against a blurred outdoor background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBILis9ky33JKOJeKnz5bfKIPPpPgMbuXerh4AzQGBKcsHiuGVGLqEjwMidLttJ8Toj-54LohQb7HpRLyIhBBZeQ63mIBraGUobo7mzs6qrKYlJIv_ekRzF--myuggb2rM9p_0wGiy4p4wDOJYPa6lVPJmqNhigwnRo7iK2Ac-x927GMLGMuPxGTZOnXeEYetfMad_BsQO4sCVFBnDGRTDZIBvy5jbLmBvzs0DMWfhGvoPIJvrf4EaHcuASB9JAf-G0HZKsZdhplck"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-white rounded-full"></span>
+</div>
+<div class="flex flex-col">
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-sky-600 leading-tight">Alex Rivers</h1>
+<span class="text-[10px] font-semibold text-emerald-600 uppercase tracking-widest font-['Manrope']">在线</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Separation Logic (from JSON) -->
+<div class="fixed top-16 left-0 w-full bg-slate-200/50 h-[1px] z-50"></div>
+<!-- Message List Canvas -->
+<main class="flex-1 pt-20 pb-24 px-4 overflow-y-auto hide-scrollbar space-y-6">
+<!-- Date Indicator -->
+<div class="flex justify-center my-4">
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-[11px] font-bold rounded-full tracking-wider font-label">今天下午</span>
+</div>
+<!-- Incoming Message -->
+<div class="flex items-end gap-3 max-w-[85%] group">
+<img alt="Alex Rivers" class="w-8 h-8 rounded-full object-cover" data-alt="blurred male portrait avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZCQIFErV_kuXdc_ZKb5chcE5LnCXeUEA9Dqa107bkXiuNRw2USl_zImh2wG_-UlNkwbjuSiOkJQRBKPvjx4ZumxUriSvgwxOgpAMlxKQDGXCRArsNKLabU6w-xrTqnedErD5ODICfoUchgdn2-YA1cAXxMonYJFadD6gFIb1nMWbUkiYB7BVl35_5o2EuS1oVXJQLNdPiv_Ieaub4KJpYmZe94HfvTy55-JsGu7QUhgorMLsQlRW_cDm4UfImUAoce33KTVgTy4Q"/>
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-lowest text-on-surface px-4 py-3 rounded-2xl rounded-bl-none shadow-[0_2px_8px_rgba(24,28,32,0.04)]">
+<p class="text-sm leading-relaxed font-body">嘿！你看了今天发布的新设计提案吗？感觉那个 Kinetic Amber 的色调非常带感。</p>
+</div>
+<span class="text-[10px] text-outline px-1 font-semibold">14:20</span>
+</div>
+</div>
+<!-- Outgoing Message -->
+<div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+<div class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-4 py-3 rounded-2xl rounded-br-none shadow-[0_8px_16px_rgba(0,96,150,0.15)]">
+<p class="text-sm leading-relaxed font-body">看到了！我也觉得这次的色彩平衡做得很好，特别是那种能量蓝的应用。</p>
+</div>
+<div class="flex items-center gap-1.5 px-1">
+<span class="text-[10px] text-outline font-semibold">14:22</span>
+<span class="text-[10px] text-primary font-bold uppercase tracking-tighter">已读</span>
+</div>
+</div>
+<!-- Incoming Message -->
+<div class="flex items-end gap-3 max-w-[85%]">
+<img alt="Alex Rivers" class="w-8 h-8 rounded-full object-cover" data-alt="blurred male portrait avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCHt5QtLD-h591GvYp7Oh78ZFCLkvxI9iFvKGlLLg2CIl-GT6WhGhhWVQ7qensxPjnPh7bIFkUzjP5fvn22dnYmSTQDbvtVc3fgRJRyWdGPQIlVEWkS_UMBJ5VXOwYD8DElAbT4EsM9JIs6NfehNknlJUukNwjat4gbY_LlzBvgkkBFNPsae16GcZXzaO02MXIfJxa7ElN_Td478fgMSu-sNCXDjdH3OiQzUoVtDTzcvs-ELCgblLWjQ50PUuUwrZphLMcdcaeRIk"/>
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-lowest text-on-surface px-4 py-3 rounded-2xl rounded-bl-none shadow-[0_2px_8px_rgba(24,28,32,0.04)]">
+<p class="text-sm leading-relaxed font-body">没错，这种“社论动感”的设计风格让整体界面看起来像是一本高级电子杂志，而不是冰冷的数据库。</p>
+</div>
+<span class="text-[10px] text-outline px-1 font-semibold">14:25</span>
+</div>
+</div>
+<!-- Image Sharing (Outgoing) -->
+<div class="flex flex-col items-end gap-1 ml-auto max-w-[70%]">
+<div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-primary-container/20">
+<img alt="Design Concept" class="w-full aspect-square object-cover" data-alt="modern abstract 3d design showing vibrant blue flowing waves with glassmorphism textures on a light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCP0KB6YlM2VvGvDbwbw8p7ElGrKR4iz78v1M7-v6MeA5tG3_MmdUriVJNzycTfaEkAosnUcNQnr3XJz7_k4fjFgPINLEZQISq2RqCWiYZevAl5BsOw-9WaDaUj38pqOUKlU5XMABhXAZ7sVNk7giSeI42F-jdnPQicYvUdwySKJLZBVFNpeXxSEHEq1n8IjEusCTQaK18VDy3esc7Y5R6DSVtRYUSlNJCYModeimibgN5d-M9fcFXeqcWKbvcAzwQTKIcTHfz-wI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div class="flex items-center gap-1.5 px-1 mt-1">
+<span class="text-[10px] text-outline font-semibold">14:26</span>
+<span class="material-symbols-outlined text-[14px] text-primary" data-icon="done_all">done_all</span>
+</div>
+</div>
+<!-- Outgoing Message -->
+<div class="flex flex-col items-end gap-1 ml-auto max-w-[85%]">
+<div class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-4 py-3 rounded-2xl rounded-br-none shadow-[0_8px_16px_rgba(0,96,150,0.15)]">
+<p class="text-sm leading-relaxed font-body">这是我刚画的一个概念图，你觉得这种阴影处理方式怎么样？</p>
+</div>
+<div class="flex items-center gap-1.5 px-1">
+<span class="text-[10px] text-outline font-semibold">14:27</span>
+<span class="text-[10px] text-primary font-bold uppercase tracking-tighter">已读</span>
+</div>
+</div>
+</main>
+<!-- Bottom Input Bar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl px-4 pt-3 pb-safe-offset-4 flex items-end gap-3 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] rounded-t-3xl">
+<div class="flex items-center gap-2 mb-2">
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined text-2xl" data-icon="add_circle">add_circle</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-slate-500 hover:bg-slate-100 rounded-full transition-all active:scale-90">
+<span class="material-symbols-outlined text-2xl" data-icon="mood">mood</span>
+</button>
+</div>
+<div class="flex-1 mb-2">
+<div class="relative flex items-center">
+<textarea class="w-full bg-surface-container-low border-none rounded-2xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all resize-none font-body placeholder:text-outline/60" placeholder="输入消息..." rows="1"></textarea>
+</div>
+</div>
+<button class="mb-2 w-11 h-11 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined text-xl" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</footer>
+<!-- CSS Padding Fix for Bottom Bar (Safe Areas) -->
+<style>
+        .pb-safe-offset-4 {
+            padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+        }
+    </style>
+</body></html>

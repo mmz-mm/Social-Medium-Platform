@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ad92ff",
+              "on-secondary-fixed-variant": "#005294",
+              "on-background": "#142f4f",
+              "secondary-fixed": "#b7d3ff",
+              "error": "#b31b25",
+              "inverse-on-surface": "#859ec4",
+              "outline-variant": "#96afd5",
+              "on-primary-fixed": "#000000",
+              "surface-container": "#dde9ff",
+              "on-tertiary": "#f7f0ff",
+              "on-secondary": "#eef3ff",
+              "on-error-container": "#570008",
+              "secondary-fixed-dim": "#9fc6ff",
+              "on-secondary-container": "#004884",
+              "error-container": "#fb5151",
+              "on-secondary-fixed": "#003563",
+              "on-tertiary-container": "#381584",
+              "primary-fixed-dim": "#009aed",
+              "primary": "#006096",
+              "surface": "#f4f6ff",
+              "secondary": "#005da7",
+              "surface-container-low": "#ebf1ff",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#445d7f",
+              "inverse-primary": "#00a5fd",
+              "on-tertiary-fixed-variant": "#41218d",
+              "on-primary": "#ebf3ff",
+              "surface-tint": "#006096",
+              "tertiary-dim": "#583ba4",
+              "surface-bright": "#f4f6ff",
+              "tertiary-container": "#baa3ff",
+              "inverse-surface": "#000e22",
+              "surface-dim": "#bcd6ff",
+              "surface-container-high": "#d4e3ff",
+              "surface-variant": "#cadeff",
+              "on-primary-fixed-variant": "#002f4c",
+              "primary-fixed": "#17a8ff",
+              "error-dim": "#9f0519",
+              "on-surface": "#142f4f",
+              "tertiary-fixed": "#baa3ff",
+              "outline": "#5f789c",
+              "secondary-container": "#b7d3ff",
+              "primary-container": "#17a8ff",
+              "surface-container-highest": "#cadeff",
+              "background": "#f4f6ff",
+              "on-primary-container": "#00253e",
+              "on-error": "#ffefee",
+              "secondary-dim": "#005192",
+              "on-tertiary-fixed": "#1d0054",
+              "tertiary": "#6448b1",
+              "primary-dim": "#005483"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopAppBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(24,28,32,0.04),0_2px_8px_rgba(24,28,32,0.02)]">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<!-- Leading: Cancel -->
+<button class="flex items-center justify-center text-[#181c20] dark:text-[#f0f6fa] font-medium active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
+</button>
+<!-- Headline -->
+<h1 class="font-['Plus_Jakarta_SANS'] font-bold text-lg tracking-tight">发布动态</h1>
+<!-- Trailing: Post Button -->
+<button class="bg-gradient-to-br from-[#00a5fd] to-[#86ccfc] text-white rounded-xl px-5 py-1.5 font-bold shadow-lg shadow-blue-500/30 hover:opacity-90 active:scale-[0.98] transition-all duration-200">
+                发布
+            </button>
+</div>
+<div class="bg-gradient-to-b from-slate-200/20 to-transparent dark:from-slate-800/20 h-px w-full"></div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 mt-16 px-6 pt-6 pb-32 max-w-2xl mx-auto w-full">
+<!-- Text Editor Area -->
+<section class="mb-8">
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-lg font-medium text-on-surface placeholder:text-on-surface-variant/50 resize-none min-h-[160px] p-0" placeholder="分享你的新鲜事..."></textarea>
+</section>
+<!-- Media Grid: Asymmetric Bento Style -->
+<section class="mb-10">
+<div class="grid grid-cols-2 gap-4">
+<!-- Image Preview 1 -->
+<div class="relative group aspect-square rounded-xl overflow-hidden shadow-sm">
+<img alt="Coding environment" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern workspace with a mechanical keyboard, neon lighting, and high-end computer setup in a dark atmospheric room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxY3J9gpcoK-5QWnqqWO-Jm35woK8oTvxYV8CiohdC23JFR1I8xU8Obr8BYWxg_R-kIVDT6tADezdi3CLbc_pnx51C1IEsR9KUI6sVKMiLXv-qRWZqktlAyoqrgGbmxHFqCcjrwidZmLHaQUoVuxmlZCMFGEzbUeKU5WCP_SyR5hHdRyAsMaF2abETK78_MgoBYgDdUYpELVuiabix6X52W8QzKAC7Nz5mKw7i1kSW4Fva4gIQBufTCdf0_URKjjOa3jlMsiquWvc"/>
+<button class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-black/40 backdrop-blur-md text-white rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<!-- Image Preview 2 -->
+<div class="relative group aspect-square rounded-xl overflow-hidden shadow-sm">
+<img alt="MacBook Pro" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of a sleek silver laptop on a minimalist white desk with soft morning shadows and a green plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpBuyAqf47btSt9UYkRXtQ60cywlSOr0de5KJfD4-7ZEl_INOaIMctdnY2V2Pf9XFpR5QOk1uQjPOJHhrgMXmQdJ-bGSIW4GqTQWpKJ0FP_8qlzwHeb5raftHEuN5mpiDBHhYoxyyWKKWH-jHo6YrSysCIlcr6hZYdfUkC71eFdCz8DiqP5EbOiHLymf4CgqK6F3jfoTGSvTwN_8g-veuSPhpNLQ2bWiusknPkrrbv_DJZX77xWp4wWSOrW7ZSkspMAjaRKmmdWF0"/>
+<button class="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-black/40 backdrop-blur-md text-white rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="close">close</span>
+</button>
+</div>
+<!-- Add More Placeholder -->
+<button class="aspect-square flex flex-col items-center justify-center bg-surface-container-low border-2 border-dashed border-outline-variant/30 rounded-xl hover:bg-surface-container transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="add">add</span>
+<span class="text-xs font-bold text-on-surface-variant mt-2 tracking-wider">上传图片</span>
+</button>
+</div>
+</section>
+<!-- Interaction Row -->
+<section class="space-y-4">
+<!-- Hashtag Toggle -->
+<div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl active:bg-surface-container transition-colors cursor-pointer group">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="tag">tag</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface text-sm">添加话题</p>
+<p class="text-xs text-on-surface-variant">让更多人看到你的动态</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Location Toggle -->
+<div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl active:bg-surface-container transition-colors cursor-pointer group">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-lg group-active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-on-surface text-sm">添加位置</p>
+<p class="text-xs text-on-surface-variant">标记你的足迹</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+<!-- Dynamic Warnings & Counter -->
+<section class="mt-8 space-y-4">
+<div class="flex items-center gap-2 px-4 py-3 bg-on-error/50 rounded-lg">
+<span class="material-symbols-outlined text-error text-lg" data-icon="warning">warning</span>
+<p class="text-xs font-semibold text-error/90">请注意，部分词汇可能违反社区准则</p>
+</div>
+<div class="flex justify-end px-1">
+<span class="text-xs font-bold font-mono tracking-tighter text-on-surface-variant/60 bg-surface-container-high/40 px-3 py-1 rounded-full">120 / 500</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell (Floating Experience) -->
+<footer class="fixed bottom-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-3xl shadow-[0_-10px_30px_rgba(24,28,32,0.04)]">
+<div class="bg-[#d4e4ee] dark:bg-slate-800 h-[1px] w-full"></div>
+<div class="flex justify-around items-center w-full px-2 pt-2 pb-safe h-20">
+<!-- Home -->
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:text-[#00a5fd] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">首页</span>
+</div>
+<!-- Explore -->
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:text-[#00a5fd] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="explore">explore</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">发现</span>
+</div>
+<!-- Active: Publish -->
+<div class="flex flex-col items-center justify-center bg-[#c3dae8] dark:bg-blue-900/30 text-[#00a5fd] rounded-2xl px-4 py-2 scale-110 shadow-sm transition-all duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="add_circle" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">发布</span>
+</div>
+<!-- Notifications -->
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:text-[#00a5fd] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="notifications">notifications</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">消息</span>
+</div>
+<!-- Profile -->
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:text-[#00a5fd] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-wider mt-1">我</span>
+</div>
+</div>
+</footer>
+</body></html>

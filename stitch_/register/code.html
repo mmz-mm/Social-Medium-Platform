@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic - 注册</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#381584",
+              "on-secondary-container": "#004884",
+              "tertiary-fixed": "#baa3ff",
+              "primary-dim": "#005483",
+              "outline": "#5f789c",
+              "tertiary": "#6448b1",
+              "on-tertiary-fixed-variant": "#41218d",
+              "inverse-surface": "#000e22",
+              "tertiary-container": "#baa3ff",
+              "on-error": "#ffefee",
+              "secondary-container": "#b7d3ff",
+              "surface-container-low": "#ebf1ff",
+              "error": "#b31b25",
+              "surface": "#f4f6ff",
+              "tertiary-dim": "#583ba4",
+              "secondary": "#005da7",
+              "secondary-dim": "#005192",
+              "surface-bright": "#f4f6ff",
+              "on-surface": "#142f4f",
+              "error-container": "#fb5151",
+              "primary-fixed": "#17a8ff",
+              "primary": "#006096",
+              "on-primary-fixed": "#000000",
+              "primary-fixed-dim": "#009aed",
+              "on-primary": "#ebf3ff",
+              "tertiary-fixed-dim": "#ad92ff",
+              "outline-variant": "#96afd5",
+              "primary-container": "#17a8ff",
+              "background": "#f4f6ff",
+              "on-surface-variant": "#445d7f",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#00253e",
+              "on-secondary-fixed-variant": "#005294",
+              "on-background": "#142f4f",
+              "surface-tint": "#006096",
+              "on-primary-fixed-variant": "#002f4c",
+              "on-tertiary-fixed": "#1d0054",
+              "surface-variant": "#cadeff",
+              "surface-container-high": "#d4e3ff",
+              "surface-dim": "#bcd6ff",
+              "error-dim": "#9f0519",
+              "on-secondary-fixed": "#003563",
+              "on-tertiary": "#f7f0ff",
+              "secondary-fixed-dim": "#9fc6ff",
+              "secondary-fixed": "#b7d3ff",
+              "surface-container": "#dde9ff",
+              "on-error-container": "#570008",
+              "surface-container-highest": "#cadeff",
+              "inverse-primary": "#00a5fd",
+              "inverse-on-surface": "#859ec4",
+              "on-secondary": "#eef3ff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+              "body": ["Manrope", "Noto Sans SC"],
+              "label": ["Manrope", "Noto Sans SC"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Noto Sans SC', 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Anchor -->
+<header class="bg-sky-50/80 backdrop-blur-xl sticky top-0 z-50 flex justify-center items-center w-full px-6 py-4 shadow-[0_10px_30px_rgba(24,28,32,0.04),0_2px_8px_rgba(24,28,32,0.02)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-500" data-icon="bubble_chart">bubble_chart</span>
+<h1 class="text-2xl font-black italic tracking-tight text-blue-600 font-headline">Kinetic</h1>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center p-6 sm:p-12 relative overflow-hidden">
+<!-- Abstract Background Decor -->
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary-container/10 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-tertiary-container/10 rounded-full blur-[100px]"></div>
+<!-- Registration Card -->
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl p-8 shadow-[0_10px_30px_rgba(24,28,32,0.04),0_2px_8px_rgba(24,28,32,0.02)] border border-white/20 relative z-10">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold text-on-surface font-headline tracking-tight mb-2">创建新账号</h2>
+<p class="text-on-surface-variant font-body">加入 Kinetic 开启你的创意之旅</p>
+</div>
+<form class="space-y-6">
+<!-- Username -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-1 font-label">用户名</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline-variant group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="person">person</span>
+</div>
+<input class="w-full pl-11 pr-4 py-3.5 bg-surface-container-low border-none rounded-lg focus:ring-0 focus:bg-surface-container-highest transition-all text-on-surface placeholder:text-outline-variant/60 font-body" placeholder="设置你的唯一标识" type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<!-- Phone / Email -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-1 font-label">手机号码或邮箱</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline-variant group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="contact_mail">contact_mail</span>
+</div>
+<input class="w-full pl-11 pr-4 py-3.5 bg-surface-container-low border-none rounded-lg focus:ring-0 focus:bg-surface-container-highest transition-all text-on-surface placeholder:text-outline-variant/60 font-body" placeholder="手机号或 example@kinetic.com" type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<!-- Password -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-1 font-label">密码</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline-variant group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="lock">lock</span>
+</div>
+<input class="w-full pl-11 pr-4 py-3.5 bg-surface-container-low border-none rounded-lg focus:ring-0 focus:bg-surface-container-highest transition-all text-on-surface placeholder:text-outline-variant/60 font-body" placeholder="至少 8 位字符" type="password"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant ml-1 font-label">确认密码</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline-variant group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="verified_user">verified_user</span>
+</div>
+<input class="w-full pl-11 pr-4 py-3.5 bg-surface-container-low border-none rounded-lg focus:ring-0 focus:bg-surface-container-highest transition-all text-on-surface placeholder:text-outline-variant/60 font-body" placeholder="再次输入密码" type="password"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary group-focus-within:w-full transition-all duration-300"></div>
+</div>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-3 px-1">
+<div class="flex items-center h-5">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 bg-surface-container-low" type="checkbox"/>
+</div>
+<label class="text-xs text-on-surface-variant leading-tight font-label">
+                        我已阅读并同意 <a class="text-primary font-bold hover:underline underline-offset-4" href="#">用户协议</a> 和 <a class="text-primary font-bold hover:underline underline-offset-4" href="#">隐私政策</a>
+</label>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-4 bg-gradient-to-r from-[#054e7a] to-[#006096] text-on-primary font-bold rounded-lg shadow-[0_8px_24px_rgba(0,96,150,0.25)] active:scale-95 transition-all duration-200 font-headline text-lg mt-4" type="submit">
+                    立即注册
+                </button>
+<!-- Login Toggle -->
+<div class="text-center mt-6">
+<p class="text-sm text-on-surface-variant font-body">
+                        已有账号？
+                        <a class="text-primary font-bold hover:text-primary-dim transition-colors ml-1" href="#">立即登录</a>
+</p>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer Anchor -->
+<footer class="bg-sky-50 w-full py-8 mt-auto flex flex-col items-center space-y-4 px-8 text-center border-t border-sky-100/50">
+<div class="flex gap-6 mb-2">
+<a class="text-slate-400 text-[10px] uppercase tracking-widest font-['Noto_Sans_SC'] hover:text-blue-500 transition-all" href="#">隐私政策</a>
+<a class="text-slate-400 text-[10px] uppercase tracking-widest font-['Noto_Sans_SC'] hover:text-blue-500 transition-all" href="#">服务条款</a>
+<a class="text-slate-400 text-[10px] uppercase tracking-widest font-['Noto_Sans_SC'] hover:text-blue-500 transition-all" href="#">帮助中心</a>
+</div>
+<p class="text-slate-400 text-[10px] uppercase tracking-widest font-['Noto_Sans_SC'] opacity-80">
+            © 2024 Kinetic Editorial. 版权所有。
+        </p>
+</footer>
+</body></html>
